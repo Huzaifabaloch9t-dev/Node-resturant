@@ -3,7 +3,7 @@ const Food = require("../models/Food");
 
 const router = express.Router();
 
-/* GET all foods */
+
 router.get("/", async (req, res) => {
   try {
     const foods = await Food.find();
@@ -13,7 +13,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-/* POST add food */
 router.post("/", async (req, res) => {
   try {
     const { name, price, image } = req.body;
